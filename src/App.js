@@ -28,7 +28,8 @@ function App() {
 
  const navigate =useNavigate();
 
- 
+
+// In case you want to do all functions in a single file 
 //  const NextPage = ()=>{
 
 //   return(
