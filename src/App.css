@@ -1,38 +1,96 @@
-.App {
+.gallery{
+  -webkit-column-count: 3;
+  -moz-column-count:3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  padding: 0 12px;
+  margin-top: 80px;
+}
+
+.pics{
+  padding: 8px 2px;
+}
+
+h1{
+  position: fixed;
+  color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #0e243b; /* Optional background color */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fixed-button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #f8f9fa; /* Optional background color */
+  text-align: center; /* Align the button to the center of the container */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.fixed-button-container-b {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background-color: #f8f9fa; /* Optional background color */
+  text-align: center; /* Align the button to the center of the container */
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+input[type="checkbox"]:checked::before {
+  content: '\2713 '; /* Checkmark unicode character */
+  font-weight: 500;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+  color:white;
+}
+
+
+
+@media(max-width: 991px){
+  .gallery{
+    -webkit-column-count: 2;
+    -moz-column-count:2;
+    column-count: 2;
   }
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width: 500px){
+  .gallery{
+    -webkit-column-count: 1;
+    -moz-column-count:1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
 }
